@@ -5,7 +5,7 @@ export default async function PostPage({ params }: any) {
   const id = (await params).id;
   console.log('start fetch', id);
   // 使用 fetch 在服务端获取数据（默认就是 Server Component）
-  const res = await fetch(`http://localhost:3000/api/users`, {
+  const res = await fetch(`https://test-nextjs-base.vercel.app/api/users`, {
     // 可选：设置缓存策略，Next.js 会结合 revalidate 使用
     next: { revalidate: 10 } // ⚠️ 关键：设置 ISR 的重新验证时间为 10 秒
   });
